@@ -1,5 +1,5 @@
 import cv2
-import os
+import os #to find path
 import random
 import sqlite3
 #from training import ids
@@ -31,6 +31,7 @@ while(True):
     # Detecting different faces
     faces = face_detector.detectMultiScale(gray, 1.3, 5)
     # Looping through all the detected faces in the frame
+    # print(faces)
     for (x,y,w,h) in faces:
         # Crop the image frame into rectangle
         cv2.rectangle(image_frame, (x,y), (x+w,y+h), (255,0,0), 2)

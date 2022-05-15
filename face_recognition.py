@@ -1,4 +1,3 @@
-
 import cv2
 import numpy as np
 import os 
@@ -31,7 +30,7 @@ while True:
     for(x,y,w,h) in faces:
         cv2.rectangle(im, (x-20,y-20), (x+w+20,y+h+20), (200,255,24), 4)
         # Recognize the face belongs to which ID
-        Id,con= recognizer.predict(gray[y:y+h,x:x+w])  #Our trained model is working here
+        Id,con= recognizer.predict(gray[y:y+h,x:x+w])
         # c.execute("Select name from users where Id=(?);",(Id,))
         # res = c.fetchall()
         # print(res)

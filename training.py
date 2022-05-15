@@ -1,4 +1,3 @@
-
 import cv2
 import os
 import numpy as np
@@ -20,6 +19,7 @@ def getImagesAndLabels(path):
 
     # Getting all file paths
     imagePaths = [os.path.join(path,f) for f in os.listdir(path)] 
+    print(imagePaths)
     faceSamples=[]
     ID = []
     for imagePath in imagePaths:
